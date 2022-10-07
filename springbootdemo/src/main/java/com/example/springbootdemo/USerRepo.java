@@ -1,0 +1,13 @@
+package com.example.springbootdemo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+
+
+public interface USerRepo extends CrudRepository<User, Integer> {
+
+    static Iterable<User> saveAll(List<User> users) {
+        return users;
+    }
+}
