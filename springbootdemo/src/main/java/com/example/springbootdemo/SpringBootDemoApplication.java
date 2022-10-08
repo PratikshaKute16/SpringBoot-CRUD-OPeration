@@ -17,8 +17,8 @@ public class SpringBootDemoApplication {
 //	User user= new User();
 //	user.setName("Pratiksha");
 //	user.setCity("Pune");
-
-//  saving single user
+//
+////  saving single user
 //	User user1=uSerRepo.save(user);
 //		System.out.println(user1);
 
@@ -38,10 +38,10 @@ public class SpringBootDemoApplication {
 
 //saving multiple user
 //		List<User>users=List.of(user,user1);
-//		Iterable<User> result=USerRepo.saveAll(users);
+////		Iterable<User> result=USerRepo.saveAll(users);
 //		result.forEach(User->{
 //			System.out.println(result);
-//		});
+		//});
 
 // update the user of  id 2
 //         Optional<User> optional =uSerRepo.findById(2);
@@ -54,14 +54,15 @@ public class SpringBootDemoApplication {
 //		uSerRepo.deleteById(2);
 //		System.out.println("Deleted");
 
-		//Deleting the user element (by deleteAll)
-		Iterable<User> allUsers=uSerRepo.findAll();
-		allUsers.forEach(user -> System.out.println(user));
-			uSerRepo.deleteAll(allUsers);
+
+//Deleting the user element (by deleteAll)
+//		Iterable<User> allUsers=uSerRepo.findAll();
+//		allUsers.forEach(user -> System.out.println(user));
+//			uSerRepo.deleteAll(allUsers);
 
 
-
-
+		List<User> users=uSerRepo.findByName("Sanket");
+         users.forEach(user -> System.out.println(user));
 	}
 
 }

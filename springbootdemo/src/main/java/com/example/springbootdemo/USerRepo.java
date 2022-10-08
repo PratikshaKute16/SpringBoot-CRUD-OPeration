@@ -10,4 +10,5 @@ public interface USerRepo extends CrudRepository<User, Integer> {
     static Iterable<User> saveAll(List<User> users) {
         return users;
     }
+    public List<User> findByName(String name);
 }
