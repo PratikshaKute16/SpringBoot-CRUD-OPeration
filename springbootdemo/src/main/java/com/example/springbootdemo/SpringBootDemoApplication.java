@@ -51,8 +51,14 @@ public class SpringBootDemoApplication {
 //		System.out.println(result);
 
 //Deleting the user element(by id)
-		uSerRepo.deleteById(2);
-		System.out.println("Deleted");
+//		uSerRepo.deleteById(2);
+//		System.out.println("Deleted");
+
+		//Deleting the user element (by deleteAll)
+		Iterable<User> allUsers=uSerRepo.findAll();
+		allUsers.forEach(user -> System.out.println(user));
+			uSerRepo.deleteAll(allUsers);
+
 
 
 
