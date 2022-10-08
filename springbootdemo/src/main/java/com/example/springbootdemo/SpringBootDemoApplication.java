@@ -44,11 +44,16 @@ public class SpringBootDemoApplication {
 //		});
 
 // update the user of  id 2
-         Optional<User> optional =uSerRepo.findById(2);
-		 User user= optional.get();
-		 user.setCity("Ahemadnagar");
-		 User result=uSerRepo.save(user);
-		System.out.println(result);
+//         Optional<User> optional =uSerRepo.findById(2);
+//		 User user= optional.get();
+//		 user.setCity("Ahemadnagar");
+//		 User result=uSerRepo.save(user);
+//		System.out.println(result);
+
+//Deleting the user element(by id)
+		uSerRepo.deleteById(2);
+		System.out.println("Deleted");
+
 
 
 	}
