@@ -61,8 +61,11 @@ public class SpringBootDemoApplication {
 //			uSerRepo.deleteAll(allUsers);
 
 
-		List<User> users=uSerRepo.findByName("Sanket");
-         users.forEach(user -> System.out.println(user));
+//		List<User> users=uSerRepo.findByName("Sanket");
+//         users.forEach(user -> System.out.println(user));
+
+		List<User> users=uSerRepo.findByNameAndCity("Sanket","A.nagar");
+		users.forEach(user -> System.out.println(user));
 	}
 
 }

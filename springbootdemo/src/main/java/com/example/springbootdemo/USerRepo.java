@@ -11,4 +11,5 @@ public interface USerRepo extends CrudRepository<User, Integer> {
         return users;
     }
     public List<User> findByName(String name);
+    public  List<User> findByNameAndCity(String name, String city);
 }
