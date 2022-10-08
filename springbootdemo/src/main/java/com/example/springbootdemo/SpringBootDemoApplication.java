@@ -38,10 +38,10 @@ public class SpringBootDemoApplication {
 
 //saving multiple user
 //		List<User>users=List.of(user,user1);
-////		Iterable<User> result=USerRepo.saveAll(users);
+//		Iterable<User> result=USerRepo.saveAll(users);
 //		result.forEach(User->{
 //			System.out.println(result);
-		//});
+//		});
 
 // update the user of  id 2
 //         Optional<User> optional =uSerRepo.findById(2);
@@ -51,8 +51,8 @@ public class SpringBootDemoApplication {
 //		System.out.println(result);
 
 //Deleting the user element(by id)
-//		uSerRepo.deleteById(2);
-//		System.out.println("Deleted");
+		uSerRepo.deleteById(2);
+		System.out.println("Deleted");
 
 
 //Deleting the user element (by deleteAll)
@@ -62,7 +62,7 @@ public class SpringBootDemoApplication {
 
 		// Derive Methods
 
-//		List<User> users=uSerRepo.findByName("Sanket");
+//	List<User> users=uSerRepo.findByName("Sanket");
 //         users.forEach(user -> System.out.println(user));
 
 		List<User> users=uSerRepo.findByNameAndCity("Sanket","A.nagar");
