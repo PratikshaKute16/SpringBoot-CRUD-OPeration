@@ -10,6 +10,7 @@ import java.util.Optional;
 @SpringBootApplication
 public class SpringBootDemoApplication {
 	public static void main(String[] args) {
+
 		System.out.println("Welcome to springboot");
 	ApplicationContext context=SpringApplication.run(SpringBootDemoApplication.class, args);
 	USerRepo uSerRepo=context.getBean(USerRepo.class);
